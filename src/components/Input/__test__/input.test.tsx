@@ -4,11 +4,14 @@ import { Input } from '@components/Input'
 
 describe('Component: Input', () => {
   it('should be render whithout activity indicator if isLoading prop is undefined.', () => {
-    render(<Input isLoading />)
+    render(<Input />)
 
-    const activityIndicator = screen.getByTestId('activity-indicator')
+    // quando utilizamos o get, no nosso caso usando getByTestId ele/eles retornam uma exceção
+    //  const activityIndicator = screen.getByTestId('activity-indicator')
+    //   por isso vamos usar o queryByTestId
+    const activityIndicator = screen.queryByTestId('activity-indicator')
 
-    console.log(activityIndicator)
+    expect(activityIndicator).toBeNull()
   })
 })
 
