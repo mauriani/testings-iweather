@@ -13,6 +13,14 @@ describe('Component: Input', () => {
 
     expect(activityIndicator).toBeNull()
   })
+
+  it('should be render whithout activity indicator if isLoading prop is true.', () => {
+    render(<Input isLoading />)
+
+    const activityIndicator = screen.getByTestId('activity-indicator')
+
+    expect(activityIndicator).toBeTruthy()
+  })
 })
 
 /*
