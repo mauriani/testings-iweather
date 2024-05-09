@@ -1,5 +1,6 @@
 {
   "preset":"jest-expo",
+  "bail": true, 
   "transform": {
     "^.+\\.jsx?$": "babel-jest",
     "^.+\\.svg$": "jest-transformer-svg"
