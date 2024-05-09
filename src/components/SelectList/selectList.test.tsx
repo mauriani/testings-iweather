@@ -28,7 +28,7 @@ describe('Component: SelectList', () => {
     // evento de clicar
     fireEvent.press(seletedCity)
 
-    // ESPERANDO QUE FOSSE CHAMADA UMA VEX
+    // ESPERANDO QUE FOSSE CHAMADA UMA VEz
     expect(onPress).toHaveBeenCalledWith(data[1])
   })
 
@@ -37,7 +37,7 @@ describe('Component: SelectList', () => {
 
     const options = screen.getByTestId('options')
 
-    console.log('options', options.children)
+    
     expect(options.children).toHaveLength(0)
   })
 })
